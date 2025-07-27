@@ -1,0 +1,1 @@
+class Zen_RebuiltWell extends Well {};
