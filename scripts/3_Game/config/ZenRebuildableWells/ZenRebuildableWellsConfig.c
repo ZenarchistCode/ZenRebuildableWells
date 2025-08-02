@@ -3,18 +3,19 @@ class ZenRebuildableWellsConfig
 	// Static constant config version (is NOT saved to json)
 	static const string CONFIG_VERSION = "1";
 
+	static const string WELL_STATIC_P3D = "misc_well.p3d";
+	static const string WELL_REBUILDABLE_TYPE = "Zen_RebuildableWell";
+	static const string WELL_SPAWNER_TYPE = "Zen_RebuiltWell_Spawn";
+	static const string WELL_BUILT_TYPE = "Zen_RebuiltWell";
+	static const vector WELL_OFFSET = "0 0.9 0";
+
 	// Config location
 	private const static string zenModFolder = "$profile:\\Zenarchist\\";
 	private const static string zenConfigName = "ZenRebuildableWellsConfig.json";
 
 	// Main config data
 	string ConfigVersion = "";
-	string DefunctWellType;
-	string RebuildableWellType;
-	string BuiltWellType;
-	vector BuiltWellOffset;
 	int DamageTool;
-	int SecsTilDespawn;
 	bool RespawnRebuildableWells;
 	bool DeleteRebuildableWells;
 
@@ -38,12 +39,7 @@ class ZenRebuildableWellsConfig
 		}
 
 		ConfigVersion = CONFIG_VERSION;
-		DefunctWellType = "misc_well.p3d";
-		RebuildableWellType = "Zen_RebuildableWell";
-		BuiltWellType = "Zen_RebuiltWell";
-		BuiltWellOffset = "0 0.9 0";
 		DamageTool = 100;
-		SecsTilDespawn = 0;
 		RespawnRebuildableWells = true;
 		DeleteRebuildableWells = false;
 

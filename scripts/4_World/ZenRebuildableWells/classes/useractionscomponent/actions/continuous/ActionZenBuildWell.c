@@ -65,10 +65,10 @@ class ActionZenBuildWell: ActionContinuousBase
 		vector pos = rebuildableWell.GetPosition();
 		vector ori = rebuildableWell.GetOrientation();
 
-		EntityAI newObj = EntityAI.Cast(GetGame().CreateObject("Zen_RebuiltWell_Spawn", vector.Zero));
+		EntityAI newObj = EntityAI.Cast(GetGame().CreateObject(ZenRebuildableWellsConfig.WELL_SPAWNER_TYPE, vector.Zero));
 		if (!newObj)
 		{
-			Error("Failed to spawn well!");
+			Error("Failed to spawn well " + ZenRebuildableWellsConfig.WELL_SPAWNER_TYPE);
 			return;
 		}
 

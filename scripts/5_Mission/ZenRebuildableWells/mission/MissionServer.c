@@ -54,7 +54,7 @@ modded class MissionServer
 			debugName.ToLower();
 			className.ToLower();
 
-			string checkName = GetZenRebuildableWellsConfig().DefunctWellType;
+			string checkName = ZenRebuildableWellsConfig.WELL_STATIC_P3D;
 			checkName.ToLower();
 
 			// If map object is what we're looking for, add it to the array
@@ -70,7 +70,7 @@ modded class MissionServer
 				for (int i = 0; i < objectsNearWell.Count(); i++)
 				{
 					Object objNearWell = objectsNearWell.Get(i);
-					if (objNearWell.IsInherited(Zen_RebuildableWell))
+					if (objNearWell.IsKindOf(ZenRebuildableWellsConfig.WELL_REBUILDABLE_TYPE))
 					{
 						oldObjCount++;
 						foundWell = true;
@@ -121,10 +121,10 @@ modded class MissionServer
 
 	bool SpawnZenRebuildableWell(vector pos, vector ori)
 	{
-		EntityAI newObj = EntityAI.Cast(GetGame().CreateObject(GetZenRebuildableWellsConfig().RebuildableWellType, pos));
+		EntityAI newObj = EntityAI.Cast(GetGame().CreateObject(ZenRebuildableWellsConfig.WELL_REBUILDABLE_TYPE, pos));
 		if (!newObj)
 		{
-			Error("Failed to spawn " + GetZenRebuildableWellsConfig().RebuildableWellType);
+			Error("Failed to spawn " + ZenRebuildableWellsConfig.WELL_REBUILDABLE_TYPE);
 			return false;
 		}
 
@@ -133,7 +133,7 @@ modded class MissionServer
 		newObj.SetScale(0.01); // tiny, this obj is just for vicinity icon.
 		newObj.Update();
 
-		Print("[ZenRebuildableWells] Spawned " + GetZenRebuildableWellsConfig().RebuildableWellType + " @ " + pos + " lifetime=" + newObj.GetLifetime());
+		Print("[ZenRebuildableWells] Spawned " + newObj.GetType() + " @ " + pos + " lifetime=" + newObj.GetLifetime());
 
 		return true;
 	}

@@ -1,8 +1,16 @@
 [h1]What Is This?[/h1]
 
-This mod adds the ability to rebuild defunct wells. It requires all the attached materials + a sledgehammer to build, and is persistent.
+This mod adds the ability to rebuild defunct wells. It requires all the attached materials + a sledgehammer or pickaxe to build, and is persistent.
 
-Click here to see which wells I mean: https://github.com/ZenarchistCode/ZenModPack/wiki/Zen's-Rebuildable-Wells
+Required materials: 4 planks, 50 nails, 4 stones, 1 metal wire and 1 metal pipe.
+
+Click here to see which wells I mean - they're all over Livonia + Chernarus: https://github.com/ZenarchistCode/ZenModPack/wiki/Zen's-Rebuildable-Wells
+
+They're usually in remote areas, great for building an off-grid home!
+
+The server types config allows admins to specify how long the wells last for once rebuilt.
+
+By default, wells last forever (until server is wiped). To reduce their lifetime check my instructions on the GitHub page linked above.
 
 [h1]Installation Instructions:[/h1]
 
@@ -20,4 +28,4 @@ All my mods are free and open source, but it takes an enormous amount of time to
 
 https://buymeacoffee.com/zenarchist
 
-Enjoy!
+Enjoy

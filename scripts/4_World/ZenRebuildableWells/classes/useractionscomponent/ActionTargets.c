@@ -4,7 +4,7 @@ modded class ActionTargets
 	{
 		if (super.IsObstructedEx(object, cache))
 		{
-			if (object && (object.IsInherited(Zen_RebuildableWell) || object.IsInherited(Zen_RebuiltWell)))
+			if (object && (object.IsKindOf(ZenRebuildableWellsConfig.WELL_REBUILDABLE_TYPE) || object.IsKindOf(ZenRebuildableWellsConfig.WELL_BUILT_TYPE)))
 			{
 				return false;
 			}
